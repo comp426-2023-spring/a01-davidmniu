@@ -40,7 +40,7 @@ const readfile = fs.readFile('./public/index.html', 'utf8', (err, data) => {
 
 const server = http.createServer((req, res) => {
 	res.writeHead(200, {'Content-Type': 'text/html'});
-	res.end(readfile());
+	res.end(readfile);
 });
 
 
