@@ -1,0 +1,22 @@
+{
+  "name": "david-webserver",
+  "version": "1.0.0",
+  "description": "david's webserver",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js --port=5555"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a01-davidmniu.git"
+  },
+  "author": "davidmniu",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a01-davidmniu/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a01-davidmniu#readme",
+  "dependencies": {
+    "minimist": "^1.2.7"
+  }
+}
