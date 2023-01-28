@@ -22,15 +22,6 @@ console.log(port)
 // If there is an error, put it on the console error and return. 
 // Do not be nice about exiting.
 
-const readfile = fs.readFile('./public/index.html', 'utf8', (err, data) => {
-	if (err) {
-    	console.error(err)
-    	return
-  	}
-	return data
-});
-
-
 // Define a const `server` as an arrow function using http.createServer. 
 // Use the documentation for the node.js http module. 
 // The function should have three responses: 
@@ -39,8 +30,14 @@ const readfile = fs.readFile('./public/index.html', 'utf8', (err, data) => {
 // 3. end with the data that you are reading in from ./public/index.html.
 
 const server = http.createServer((req, res) => {
-	res.writeHead(200, {'Content-Type': 'text/html'});
-	res.end(readfile);
+	fs.readFile('./public/index.html', 'utf8', (err, data) => {
+		if (err) {
+			console.error(err)
+			return
+		}
+		res.writeHead(200, {'Content-Type': 'text/html'});
+		res.end(data);
+	});
 });
 
 
